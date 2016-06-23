@@ -56,22 +56,22 @@ var $selectBox = $('<select/>').attr('id', 'selectBox').css('display', 'block'),
 
 $('#selectBox').on('change', function (event) {
   var arr = [];
-firstAJAX()
-  .then(function (data1){
-    // console.log(data1);
-    arr.push(data1);
-    return secondAJAX(data1);
-  })
-  .then(function (data2) {
-    // console.log(data2);
-    arr.push(data2);
-    return thirdAJAX(data2);
-  })
-  .then(function (data3) {
-    arr.push(data3);
-    // console.log(data3);
-    populatePage(arr, event);
-  });
+    firstAJAX()
+      .then(function (data1){
+        // console.log(data1);
+        arr.push(data1);
+        return secondAJAX(data1);
+      })
+      .then(function (data2) {
+        // console.log(data2);
+        arr.push(data2);
+        return thirdAJAX(data2);
+      })
+      .then(function (data3) {
+        arr.push(data3);
+        // console.log(data3);
+        populatePage(arr, event);
+      });
 });
 
 function populatePage (data, event) {
