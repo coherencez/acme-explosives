@@ -37,7 +37,7 @@ var thirdAJAX = function() {
   });
 };
 
-var $selectBox = $('<select/>').attr('id', 'selectBox'),
+var $selectBox = $('<select/>').attr('id', 'selectBox').css('display', 'block'),
 		$selectDisabled = $('<option/>'),
 		$selOption = $('<option/>'),
 		$selOption2 = $('<option/>');
@@ -49,8 +49,8 @@ var $selectBox = $('<select/>').attr('id', 'selectBox'),
 		$selectBox.append($selectDisabled);
 		$selectBox.append($selOption);
 		$selectBox.append($selOption2);
-
-		$('h1').append($selectBox);
+   
+		$('#heading').append($selectBox);
 
 
 
