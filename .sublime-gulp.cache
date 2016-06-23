@@ -1,0 +1,1 @@
+{"/Users/Swann/workspace/exercises/modern-js/acme-explosives/gulpfile.js":{"sha1":"480a7295d504d5d9bce91fb3e5097947e76b1ce3","tasks":{"default":{"name":"default","dependencies":"lint watch"},"watch":{"name":"watch","dependencies":""},"lint":{"name":"lint","dependencies":""}}}}
