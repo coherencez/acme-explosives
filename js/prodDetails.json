@@ -1,22 +1,22 @@
 {
-    "products": [{
-        "fairy_sparklers": {
+    "products": [
+        {
             "id": 0,
             "type": 0,
             "name": "Fairy Sparklers",
             "description": "Multi-colored sparklers that are safe for any age."
         },
-        "hoozy_doozits": {
+        {
             "id": 1,
             "type": 0,
             "name": "Hoozy Doozits",
             "description": "Monochrome excitement for the old heads!"
         },
-        "thunder_sticks": {
+        {
             "id": 2,
             "type": 1,
             "name": "Thunder Sticks",
             "description": "Munitions meant for blasting shit. Seriously."
         }
-    }]
+    ]
 }

@@ -79,38 +79,38 @@ function populatePage (data, event) {
   let selectValue = event.target.value.toLowerCase(),
       category = data[0].categories,
       type = data[1].types,
+      productArr = data[2].products,
       htmlString = '',
       $output = $('#output');
+
   $output.empty();
   if (selectValue === 'fireworks') {
-    let fairySpark = data[2].products[0].fairy_sparklers,
-        hoozyDooz = data[2].products[0].hoozy_doozits;
-
-        htmlString = `<div class="col-xs-4">
-                          <h3>${fairySpark.name}</h3>
-                          <p>${fairySpark.description}</p>
-                          <p class="info">Category: ${category[0].name}</p>
-                          <p class="info">Type: ${type[0].name}</p>
-                          <p class="info">${type[0].description}</p>
-                       </div>
-                       <div class="col-xs-4">
-                          <h3>${hoozyDooz.name}</h3>
-                          <p>${hoozyDooz.description}</p>
-                          <p class="info">Category: ${category[0].name}</p>
-                          <p class="info">Type: ${type[0].name}</p>
-                          <p class="info">${type[0].description}</p>
-                       </div>`;  
+    for (let i = 0, j = productArr.length; i < j; i++) {
+      let product = productArr[i];
+      if (product.type === 0) {
+      htmlString += `<div class="col-xs-4">
+                      <h3>${product.name}</h3>
+                      <p>${product.description}</p>
+                      <p class="info">Category: ${category[0].name}</p>
+                      <p class="info">Type: ${type[0].name}</p>
+                      <p class="info">${type[0].description}</p>
+                     </div>`;
+      }
+    }
   }
   if (selectValue === 'demolition') {
-    let thunderStick = data[2].products[0].thunder_sticks;
-
-    htmlString = `<div class="col-xs-4">
-                    <h3>${thunderStick.name}</h3>
-                    <p>${thunderStick.description}</p>
-                    <p class="info">Category: ${category[1].name}</p>
-                    <p class="info">Type: ${type[1].name}</p>
-                    <p class="info">${type[1].description}</p>
-                  </div>`;
+    for (let i = 0, j = productArr.length; i < j; i++) {
+      let product = productArr[i];
+      if (product.type === 1) {
+      htmlString += `<div class="col-xs-4">
+                      <h3>${product.name}</h3>
+                      <p>${product.description}</p>
+                      <p class="info">Category: ${category[1].name}</p>
+                      <p class="info">Type: ${type[1].name}</p>
+                      <p class="info">${type[1].description}</p>
+                     </div>`;
+      }
+    }
   }
   $output.append(htmlString);
 }
